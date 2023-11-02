@@ -8,6 +8,11 @@
 firebase.initializeApp({
   apiKey: "AIzaSyA_Xr5mF1cFcsG-pM-yHZDvnDcED2L4bq0",
   authDomain: "sec1td1.firebaseapp.com",
+  projectId: "sec1td1",
+  storageBucket: "sec1td1.appspot.com",
+  messagingSenderId: "401243344262",
+  appId: "1:401243344262:web:49221e3002dd9086b9b007",
+  measurementId: "G-T3LN14NYXR"
   // databaseURL: "YOUR_DATABASE_URL",
 });
 
