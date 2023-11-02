@@ -1,5 +1,8 @@
 /*! For license information please see main.198a48f8.js.LICENSE.txt */
-import { initializeApp, firestore } from "./firebase";
+// import { initializeApp, firestore } from "firebase/app";
+import 'firebase/auth'; // Incluez uniquement les sous-modules dont vous avez besoin
+import 'firebase/firestore'; 
+import { initializeApp, firestore }  from 'firebase/app';
 
 // Connexion à la base de données
 initializeApp({
