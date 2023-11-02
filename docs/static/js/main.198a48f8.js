@@ -1,5 +1,5 @@
 /*! For license information please see main.198a48f8.js.LICENSE.txt */
-import { initializeApp, firestore } from "firebase";
+import { initializeApp, firestore } from "./firebase";
 
 // Connexion à la base de données
 initializeApp({
