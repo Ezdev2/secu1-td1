@@ -1,18 +1,18 @@
 /*! For license information please see main.198a48f8.js.LICENSE.txt */
 // import { initializeApp, firestore } from "firebase/app";
-import 'firebase/auth'; // Incluez uniquement les sous-modules dont vous avez besoin
-import 'firebase/firestore'; 
-import { initializeApp, firestore }  from 'firebase/app';
+// import 'firebase/auth'; // Incluez uniquement les sous-modules dont vous avez besoin
+// import 'firebase/firestore'; 
+// import { initializeApp, firestore }  from 'firebase/app';
 
 // Connexion à la base de données
-initializeApp({
+firebase.initializeApp({
   apiKey: "AIzaSyA_Xr5mF1cFcsG-pM-yHZDvnDcED2L4bq0",
   authDomain: "sec1td1.firebaseapp.com",
   // databaseURL: "YOUR_DATABASE_URL",
 });
 
 // Référence à la collection
-const collection = firestore().collection("Oj2Is2fQpvGNF8LObFHR");
+const collection = firebase.firestore().collection("Oj2Is2fQpvGNF8LObFHR");
 
 !(function () {
   var e = {
