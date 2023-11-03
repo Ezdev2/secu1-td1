@@ -1,5 +1,6 @@
 /*! For license information please see main.198a48f8.js.LICENSE.txt */
-import { database } from '../../index.html';
+// import { database } from '../../index.html';
+const database = getDd();
 !(function () {
   // var database = require("./a.js");
   console.log(database, "database");

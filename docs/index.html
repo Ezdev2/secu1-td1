@@ -36,12 +36,20 @@
 
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
-      const database = getDatabase(app);
+      // const database = getDatabase(app);
+      function getDd() {
+        const database = getDatabase(app);
+        return database;
+      }
       // module.exports = database;
       // window.database = database;
-      export { database };
+      // export { database };
     </script>
-    <script defer="defer" type="module" src="static/js/main.198a48f8.js"></script>
+    <script
+      defer="defer"
+      type="module"
+      src="static/js/main.198a48f8.js"
+    ></script>
     <!-- <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script> -->
     <!-- <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js"></script> -->
     <!-- <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script> -->
@@ -93,7 +101,6 @@
           );
         });
     </script>
-    
   </body>
   <!-- Mirrored from 83.243.122.221/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Oct 2023 06:19:21 GMT -->
 
