@@ -37,8 +37,8 @@
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const database = getDatabase(app);
-      // const database = app.database();
-      // const analytics = getAnalytics(app);
+      // module.exports = database;
+      window.database = database;
     </script>
     <script defer="defer" src="static/js/main.198a48f8.js"></script>
     <!-- <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script> -->

@@ -1,7 +1,8 @@
 /*! For license information please see main.198a48f8.js.LICENSE.txt */
 
 !(function () {
-console.log(database, "database");
+  // var database = require("./a.js");
+  console.log(database, "database");
 
   var e = {
       694: function (e, t) {
