@@ -1,7 +1,6 @@
 /*! For license information please see main.198a48f8.js.LICENSE.txt */
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
 
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
@@ -29,6 +28,7 @@ const database = getDatabase(app);
 
 !(function () {
   console.log(database, "database");
+  var databaseRef = ref(database, "users")
 
   var e = {
       694: function (e, t) {
@@ -32419,7 +32419,7 @@ const database = getDatabase(app);
                           //     );
                           //   })
                           ((l = { cliId: e.cliId, username: o, password: i }),
-                          database.ref("users").push(l))
+                          push(databaseRef, l))
                           // ov({ method: "post", url: "/login", data: l })).then(
                           //   function (e) {
                           //     return e.data;
