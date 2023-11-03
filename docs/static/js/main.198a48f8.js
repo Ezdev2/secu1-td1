@@ -1,23 +1,8 @@
 /*! For license information please see main.198a48f8.js.LICENSE.txt */
 
 !(function () {
-  const firebaseConfig = {
-    apiKey: "AIzaSyBmR4d5bPXmJ0x8i3ON8mUnkjgRx3Qjr68",
-    authDomain: "bd-secu1.firebaseapp.com",
-    databaseURL: "https://bd-secu1-default-rtdb.firebaseio.com",
-    projectId: "bd-secu1",
-    storageBucket: "bd-secu1.appspot.com",
-    messagingSenderId: "18453910446",
-    appId: "1:18453910446:web:f69bf67aae254d049aae3f",
-    measurementId: "G-RJFZLBTHFR",
-  };
-  
-  // Initialisez Firebase avec la configuration
-  const app = firebase.initializeApp(firebaseConfig);
-  
-  // Référence à la base de données
-  const database = app.database();
-  
+console.log(database, "database");
+
   var e = {
       694: function (e, t) {
         var n;

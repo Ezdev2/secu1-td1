@@ -14,7 +14,10 @@
     <script type="module">
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+      // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+      import { getDatabase } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+
+      // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
       // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -33,7 +36,9 @@
 
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
+      const database = getDatabase(app);
+      // const database = app.database();
+      // const analytics = getAnalytics(app);
     </script>
     <script defer="defer" src="static/js/main.198a48f8.js"></script>
     <!-- <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script> -->
