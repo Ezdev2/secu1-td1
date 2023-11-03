@@ -36,14 +36,9 @@
 
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
-      // const database = getDatabase(app);
-      function getDd() {
-        const database = getDatabase(app);
-        return database;
-      }
-      // module.exports = database;
-      // window.database = database;
-      // export { database };
+      const database = getDatabase(app);
+      // Rendre la variable database globalement accessible
+      window.firebaseDatabase = database;
     </script>
     <script
       defer="defer"
