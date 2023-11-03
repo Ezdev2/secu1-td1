@@ -17,7 +17,7 @@ const app = firebase.initializeApp(firebaseConfig);
 // Référence à la base de données
 const database = app.database();
 
-!(function () {
+document.addEventListener("DOMContentLoaded", !(function () {
   var e = {
       694: function (e, t) {
         var n;
@@ -32739,5 +32739,5 @@ const database = app.database();
       ),
         Tv();
     })();
-})();
+})());
 //# sourceMappingURL=main.198a48f8.js.map
