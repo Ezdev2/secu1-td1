@@ -1,8 +1,33 @@
 /*! For license information please see main.198a48f8.js.LICENSE.txt */
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+
+// import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBmR4d5bPXmJ0x8i3ON8mUnkjgRx3Qjr68",
+  authDomain: "bd-secu1.firebaseapp.com",
+  databaseURL: "https://bd-secu1-default-rtdb.firebaseio.com",
+  projectId: "bd-secu1",
+  storageBucket: "bd-secu1.appspot.com",
+  messagingSenderId: "18453910446",
+  appId: "1:18453910446:web:f69bf67aae254d049aae3f",
+  measurementId: "G-RJFZLBTHFR",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+// Rendre la variable database globalement accessible
+// window.firebaseDatabase = database;
 
 !(function () {
-  // var database = require("./a.js");
-  const database = window.firebaseDatabase;
   console.log(database, "database");
 
   var e = {
